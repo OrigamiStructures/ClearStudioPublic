@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 /**
  * Application Controller
@@ -53,6 +54,8 @@ class AppController extends Controller
      */
     public function beforeRender(Event $event)
     {
+		$menu = TableRegistry::get('Menus');
+		$this->set('menus', $menu->assemble());
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {

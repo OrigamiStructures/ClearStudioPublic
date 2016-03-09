@@ -105,27 +105,27 @@ class AnnouncementsController extends AppController
 // </editor-fold>
 
 
-    public function confirm($param) {
+    public function confirm($param = NULL) {
         
     }
     
-    public function unsubscribe($param) {
+    public function unsubscribe($param = NULL) {
         
     }
     
-    public function subscription($param) {
+    public function subscription($param = NULL) {
         
     }
     
-    public function signup($param) {
+    public function signup($param = NULL) {
         
     }
     
-    public function invalid($param) {
+    public function invalid($param = NULL) {
         
     }
     
-    public function welcome($param) {
+    public function welcome($param = NULL) {
         
     }
 }
