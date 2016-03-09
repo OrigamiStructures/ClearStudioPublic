@@ -11,13 +11,13 @@ use App\Controller\AppController;
 class AnnouncementsController extends AppController
 {
 
+// <editor-fold defaultstate="collapsed" desc="CRUD Methods">
     /**
      * Index method
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
+    public function index()     {
         $announcements = $this->paginate($this->Announcements);
 
         $this->set(compact('announcements'));
@@ -31,8 +31,7 @@ class AnnouncementsController extends AppController
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null)     {
         $announcement = $this->Announcements->get($id, [
             'contain' => []
         ]);
@@ -46,8 +45,7 @@ class AnnouncementsController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add()     {
         $announcement = $this->Announcements->newEntity();
         if ($this->request->is('post')) {
             $announcement = $this->Announcements->patchEntity($announcement, $this->request->data);
@@ -69,8 +67,7 @@ class AnnouncementsController extends AppController
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null)     {
         $announcement = $this->Announcements->get($id, [
             'contain' => []
         ]);
@@ -94,8 +91,7 @@ class AnnouncementsController extends AppController
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null)     {
         $this->request->allowMethod(['post', 'delete']);
         $announcement = $this->Announcements->get($id);
         if ($this->Announcements->delete($announcement)) {
@@ -104,5 +100,32 @@ class AnnouncementsController extends AppController
             $this->Flash->error(__('The announcement could not be deleted. Please, try again.'));
         }
         return $this->redirect(['action' => 'index']);
+    }
+
+// </editor-fold>
+
+
+    public function confirm($param) {
+        
+    }
+    
+    public function unsubscribe($param) {
+        
+    }
+    
+    public function subscription($param) {
+        
+    }
+    
+    public function signup($param) {
+        
+    }
+    
+    public function invalid($param) {
+        
+    }
+    
+    public function welcome($param) {
+        
     }
 }
