@@ -1,0 +1,144 @@
+@import '_settings';
+@import '../bower_components/foundation-sites/scss/foundation';
+@import '../fonts/foundation-icons/foundation-icons.css';
+@import '_header';
+@import '_artwork_stack';
+@import '_dispositions';
+@import '_members';
+
+footer{
+	height: 10rem;
+}
+
+/**
+
+Review phase management of piece tables for editions and formats 
+This hover system keeps the page information density low when 
+there are many elements shown on the page. 
+
+**/
+@media only screen { /* small up */ 
+	div.pieces {
+		button {
+			display: none;
+		}
+		table {
+			display: block;
+		}
+	}
+}
+@media only screen and (min-width: 40.063em) {   
+	div.pieces {
+		position: relative;
+		button {
+			display: block;
+		}
+		table {
+			display: none;
+		}
+	}
+
+	div.pieces:hover {
+		button {
+			display: none;
+		}
+		table {
+			display: block;
+			position: absolute;
+			top: 0;
+			overflow-y: visible;
+			z-index: 1000;
+		}
+	}
+}
+
+
+/*section.format {
+	@include grid-row;
+	padding-top: 1em;
+}*/
+
+p.policy_statement {
+	padding-top: .8em;
+	font-size: 90%;
+	color: #444;
+}
+
+
+form {
+	legend {
+		background: #ccc none repeat scroll 0 0;
+		color: #7a7a7a;
+		padding-left: 0.3rem;
+		width: 100%;
+	}
+	img {
+		width: 30%;
+	}
+	
+	.form-error, .error-message {
+		color: #ec5840;
+		display: block;
+		font-size: 1rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		margin-top: 0;
+	}
+}
+
+span.nav {
+	font-size: .9rem;
+}
+
+div.radio > label {
+	
+	.disabled {
+		color: #ccc;
+	}
+	
+	input {
+		margin: .5rem;
+
+		.disabled {
+			color: #ccc;
+		}
+		
+	}
+}
+
+.disabled  {
+	color: #ccc;
+}
+
+div.training {
+	@include grid-column-row();
+	@include grid-column(8);
+}
+
+
+div.input-with-toollabel{
+    @include grid-row();
+    label {
+       @include grid-column(2); 
+       text-align: right;
+    }
+    div.input{
+        @include grid-column(10);
+    }
+}
+
+.inline_icon, .inline_nav {
+    margin-right: 0.5rem;
+/*	i {
+		background-color: #eee;
+		
+	}*/
+}
+
+span.inline_icon.nav {
+    font-size: 80%;
+    i.fi-pencil {
+        font-size: 85%;
+    }
+}
+
