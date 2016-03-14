@@ -3,3 +3,6 @@
 /tmp/*
 /logs/*
 /nbproject/private/
+nbproject/project.properties
+.DS_Store
+nbproject/project.xml
