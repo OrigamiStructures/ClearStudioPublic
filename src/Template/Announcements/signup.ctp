@@ -8,10 +8,16 @@
 </head>
 
 <body>
-    <div class="centered">
-        <h1>ClearStudio</h1>
-
-        <p>Providing artists with simple and effective tools to manage their art.</p>
+    <div class="bgimg-1">
+        <div class="logotype">
+            <h1>ClearStudio</h1>
+        </div>
+        <div class="banner">
+            <p>Providing artists with simple and effective tools to manage their art.</p>
+        </div>
+    </div>
+    <div class="bgimg-2">
+        
     </div>
 </body>
 </html>
