@@ -37,7 +37,8 @@ $cakeDescription = 'ClearStudio: Your Artwork\'s Lifeline';
 	  </div>
 	</nav>
 	<?= $this->Flash->render() ?>
-    <section class="container clearfix">
+<!--     <section class="container clearfix">
+ -->    <section>
         <?= $this->fetch('content') ?>
     </section>
     <footer>

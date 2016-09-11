@@ -1288,7 +1288,23 @@ span.inline_icon.nav {
   span.inline_icon.nav i.fi-pencil {
     font-size: 85%; }
 
-div.superdiv {
-  font-size: 90%; }
+div.back_img {
+  /* The image used */
+  background-image: url("/img/IMG_0041_2.jpg");
+  /* Full height */
+  height: 500px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+div.banner {
+  height: 1000px;
+  background-color: green; }
+
+div.logo {
+  background-color: transparent; }
 
 /*# sourceMappingURL=prime.css.map */
