@@ -1300,11 +1300,29 @@ div.back_img {
   background-repeat: no-repeat;
   background-size: cover; }
 
-div.banner {
-  height: 1000px;
-  background-color: green; }
-
 div.logo {
   background-color: transparent; }
+
+div.intro_section {
+  /* Full height */
+  height: 500px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+div.section1 {
+  /* The image used */
+  background-image: url("/img/Artists-at-Work-Sign.jpg"); }
+
+div.section2 {
+  /* The image used */
+  background-image: url("/img/painter2.jpg"); }
+
+div.section3 {
+  /* The image used */
+  background-image: url("/img/sculptor_3.jpg"); }
 
 /*# sourceMappingURL=prime.css.map */
