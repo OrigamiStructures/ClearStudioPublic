@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*@import 'util/util';*/
 /*$badge-padding: 0.3em;
 $badge-minwidth: 2.1em;
@@ -1161,6 +1162,9 @@ div.members {
 footer {
   height: 10rem; }
 
+section {
+  height: 100%; }
+
 /**
 
 Review phase management of piece tables for editions and formats 
@@ -1292,7 +1296,7 @@ div.back_img {
   /* The image used */
   background-image: url("/img/IMG_0041_2.jpg");
   /* Full height */
-  height: 500px;
+  height: 100%;
   width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -1305,13 +1309,15 @@ div.logo {
 
 div.intro_section {
   /* Full height */
-  height: 500px;
+  height: 100%;
   width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  /* Dim image */
+  background-color: green; }
 
 div.section1 {
   /* The image used */
@@ -1324,5 +1330,42 @@ div.section2 {
 div.section3 {
   /* The image used */
   background-image: url("/img/sculptor_3.jpg"); }
+
+div.bottom_bar {
+  bottom: 0;
+  position: absolute; }
+
+div.intro_section::after {
+  content: “”;
+  background-color: #ffffff;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1; }
+
+div.text {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+  div.text::before, div.text::after {
+    content: ' ';
+    display: table; }
+  div.text::after {
+    clear: both; }
+  div.text:last-child:not(:first-child) {
+    float: right; }
+  div.text, div.text:last-child {
+    float: none; }
+  div.text:last-child:not(:first-child) {
+    float: right; }
 
 /*# sourceMappingURL=prime.css.map */
